@@ -15,8 +15,12 @@
                             <h2>{{ product.name }}</h2>
                         </a>
                         <hr>
-                        <div class="price">{{ product.unitPrice | currency }}</div>
-                        <button (click)="addToCart(product)" class="btn btn-primary btn-sm">Add to cart</button>
+                        <div class="price">
+                            {{ product.unitPrice | currency }}
+                            <button (click)="addToCart(product)" class="btn btn-primary btn-sm" title="Add to cart">
+                                <i class="fa-solid fa-cart-plus"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
 

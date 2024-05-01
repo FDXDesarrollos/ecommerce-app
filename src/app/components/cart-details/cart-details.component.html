@@ -25,7 +25,7 @@
 
                                 <div class="row no-gutters">
                                     <div class="col">
-                                        <button type="button" (click)="incrementQuantity(item)" class="btn btn-primary btn-sm">
+                                        <button type="button" (click)="incrementQuantity(item)" class="btn btn-primary btn-sm" title="Increment">
                                             <i class="fas fa-plus"></i>
                                         </button>
                                     </div>
@@ -35,7 +35,7 @@
                                     </div>
 
                                     <div class="col">
-                                        <button type="button" (click)="decrementQuantity(item)" class="btn btn-primary btn-sm">
+                                        <button type="button" (click)="decrementQuantity(item)" class="btn btn-primary btn-sm" title="Decrement">
                                             <i class="fas fa-minus"></i>
                                         </button>
                                     </div>
@@ -43,12 +43,12 @@
                                     <div class="col-8"></div>
                                 </div>
                             </div>
-
                             <p class="mt-2">
                                 Sub-total {{item.quantity * item.unitPrice | currency}}
                             </p>
-                            
-                            <a (click)="remove(item)" class="secondary-btn btn-sm" role="button" aria-pressed="true">Remove</a>
+                            <p>
+                                <a (click)="remove(item)" class="btn btn-secondary" role="button" aria-pressed="true">Remove</a>
+                            </p>
                         </td>
                     </tr>
 
@@ -58,6 +58,11 @@
                             <p>Total Quantity: {{totalQuanity}}</p>
                             <p>Shipping: FREE</p>
                             <p>Total Price: {{totalPrice | currency}}</p>
+                            <p>
+                                <button type="button" routerLink="/checkout" class="btn btn-success">
+                                    <i class="fa-solid fa-cash-register"></i>&nbsp;Checkout
+                                </button>
+                            </p>
                         </td>
                     </tr>
                 </table>

@@ -1,0 +1,35 @@
+<div class="main-content page-m">
+    <div class="section-content section-content-p30 e-spc">
+        <div class="container-fluid">
+
+            <form [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+                <div formGroupName="customer" class="form-area">
+                    <h3>Customer</h3>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-space">
+                                <input type="text" formControlName="firstName" placeholder="First Name">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-space">
+                                <input type="text" formControlName="lastName" placeholder="Last Name">
+                            </div>
+                        </div>
+                        <!-- <div class="clearfix"></div> -->
+                        <div class="col-md-4">
+                            <div class="input-space">
+                                <input type="text" formControlName="email" placeholder="Email Address">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-info">Purchase</button>
+                </div>                
+            </form>
+
+        </div>
+    </div>
+</div>
